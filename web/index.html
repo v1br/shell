@@ -20,13 +20,15 @@
 <body class="cbase cwhite font-mono">
     <main id="shell" class="absolute inset-0 w-screen h-screen">
 
-        <div id="history" class="mt-4 ml-4">
-            <span>drwxrwxrwx 1 v1br v1br 512 Oct 5 15:43 Minecraft</span><br />
-            <span>drwxrwxrwx 1 v1br v1br 512 Aug 28 2024 Morrowind</span><br />
+        <div id="history">
+            <div>
+                <span>drwxrwxrwx 1 v1br v1br 512 Oct 5 15:43 Minecraft</span><br />
+                <span>drwxrwxrwx 1 v1br v1br 512 Aug 28 2024 Morrowind</span><br />
+            </div>
         </div>
 
         <div id="prompt" class="mt-4 ml-4 font-semibold">
-            <span class="cgreen">┌── (</span><span class="cblue"> v1br🔸Vibhor Agrawal </span><span class="cgreen">) -
+            <span class="cgreen">┌── (</span><span class="cblue"> v1br🔸Vibhor </span><span class="cgreen">) -
                 [~]</span><br />
             <span class="cgreen">└─ </span><span class="cblue">$</span>
             <input id="always-focus" type="text" onkeydown="if(event.key === 'Enter') run()"
@@ -35,6 +37,8 @@
     </main>
 
     <script src="index.js"></script>
+    <script src="./home/bin/bash.js"></script>
+    <script src="./home/bin/echo.js"></script>
 </body>
 
 </html>

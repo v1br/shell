@@ -1,11 +1,12 @@
-// Permanently enable focus-mode on prompt
+// Enable focus-mode on prompt
 const input = document.getElementById('always-focus');
 input.addEventListener("blur", () => {
   setTimeout(() => input.focus(), 10);
 });
 
+// Read input from prompt & clean prompt
 const run = () => {
-    console.log("Input detected!");
+    Bash(input.value);
     input.value = "";
 }
 
