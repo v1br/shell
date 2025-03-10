@@ -13,8 +13,18 @@ const Bash = (input) => {
   `
   history.appendChild(prompt);
 
-  if (input.toLowerCase().startsWith("echo")) {
+  input = input.toLowerCase().trim();
+
+  if (input.startsWith("echo ")) {
     Echo(input);
+    return;
   }
 
+  if (input === "clear") {
+    Clear(input);
+    return;
+  }
+
+  Echo(`echo Bash: command '${input.split(' ')[0]}' not found`);
+  console.log(`[${Date.now()}] ${input}`)
 }
